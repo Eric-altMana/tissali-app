@@ -1,0 +1,53 @@
+.backoffice-bg {
+    background: #fff;
+    min-height: 100vh;
+}
+
+.sidebar-card {
+    border-left: 8px solid #9a7928;
+    background: #fff;
+}
+
+.sidebar-header {
+    background: #9a7928 !important;
+    color: #fff !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.sidebar-link {
+    color: #7a5f1d;
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+    padding-left: 10px;
+}
+.sidebar-link:hover, .sidebar-link.active-link {
+    background: #9a7928;
+    color: #fff;
+}
+
+.main-card {
+    border: 2px solid #9a7928;
+    background: #fff;
+}
+
+.main-header {
+    background: #7a5f1d !important;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.table-header {
+    background: #9a7928;
+    color: #fff;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f8f5ee;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #fffbe6;
+    color: #000;
+}

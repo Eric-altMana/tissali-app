@@ -1,0 +1,9 @@
+.page-background {
+  background-color: #f8f9fa; /* couleur claire, personnalisable */
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

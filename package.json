@@ -9,14 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.1.1",
+    "@uploadcare/file-uploader": "^1.18.0",
+    "@uploadcare/react-uploader": "^1.8.1",
+    "axios": "^1.10.0",
+    "bootstrap": "^5.3.6",
+    "country-state-city": "^3.2.1",
+    "firebase": "^11.9.0",
+    "jose": "^6.0.11",
+    "lucide-react": "^0.513.0",
+    "mogoose": "^0.0.1-security",
+    "mongoose": "^8.16.0",
+    "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.3"
+    "zustand": "^5.0.6"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^19",
-    "@types/react-dom": "^19"
+    "@types/react-dom": "^19",
+    "typescript": "^5"
   }
 }
