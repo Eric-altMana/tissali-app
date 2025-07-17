@@ -70,7 +70,6 @@ function ListProduitPage() {
                                             </h5>
                                             <p className='mt-0'>
                                                 <span className=' text-end'><small>{produit?.quantite}: disponibles</small></span>
-                                                <span className="text-end fw-normal bg-warning-subtle rounded-3 ms-2 p-1 text-center"><small>Type: {produit?.type}</small></span>
                                             </p>
                                         </div>
                                     </div>
