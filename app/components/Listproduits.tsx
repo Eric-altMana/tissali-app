@@ -43,7 +43,7 @@ function ListProduitPage() {
                     {produits.length > 0 && produits.map((produit: ProduitType, index) => (
                         <div className="col" key={index}>
 
-                            <div className="cart">
+                            <div className="cart m-2">
                                 <Link href={`/pages/Detaile/${produit._id}`} className="text-decoration-none text-black">
                                     <div className="product-card card-img mb-2">
                                         {produit.images && produit.images.length > 0 && (
