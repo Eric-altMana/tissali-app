@@ -9,8 +9,6 @@ export type ClientType = {
     localisations?: LocalisationType[];
 }
 
-export type ProfilClientType = ClientType
-
 export type LocalisationType = {
     region: string;
     ville: string;
@@ -32,13 +30,16 @@ export type VendeurType = {
 
 export type ProduitType = {
     _id?: string;
-    vendeurId?: string,
     titre?: string;
+    vendeurId?: string,
+    produitNom?: string;
     description?: string;
-    prix?: number;
+    prixInitial?: number;
+    prixTotal: number;
     quantite?: number;
-    type?: string;
-    images?: string[];
+    typeProduit?: string;
+    images?: string;
+    image?: string;
     categorie?: string;
     dateAjout?: Date;
 }
@@ -52,32 +53,46 @@ export type ListProduits = {
 
 export type PanierType = {
     id?: string,
+    vendeurId?: string,
     idProduit: string,
     produitNom: string,
     typeProduit: string,
     prixInitial: number,
     qte: number,
+    qteVendue?: number,
+    qteRestante?: number,
     prixTotal: number,
-    image?: string;
+    images?: string;
+    image?: string,
+    description?: string,
+    dateAdd?: Date
 }
 
 
-export type ProduitCommandeType = {
-     _id: string;
-  idProduit: string;
-  produitNom: string;
-  prixInitial: number;
-  qte: number;
-  prixTotal: number;
-  image?: string;
-  typeProduit?: string;
-};
+/*export type ProduitCommandeType = {
+  _id: string,
+  vendeurId?: string,
+  idProduit: string,
+  produitNom: string,
+  prixInitial: number,
+  qte: number,
+  prixTotal: number,
+  image?: string,
+  typeProduit?: string,
+}; */
 
 export type CommandeType = {
-     _id: string;
-  produits: ProduitCommandeType[];
-  localisation: LocalisationType[];
-  client: ClientType[];
-  total?: number;
-  dateAjout?: Date;
+  _id?: string,
+  vendeurId?: string,
+  panier?: PanierType[],
+  produits?: ProduitType[],
+  localisation?: LocalisationType[],
+  client?: ClientType[],
+  total?: number,
+  dateAjout?: Date
 };
+
+export type CategorieType = {
+    labelCategorie: string,
+    slug: string
+}

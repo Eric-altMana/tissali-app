@@ -43,7 +43,7 @@ function LoginPage() {
 
                 setVendeur(res.data.user)
 
-                localStorage.setItem("vendeur", JSON.stringify(res.data.user))
+                localStorage.setItem("vendeur", JSON.stringify(res.data.vendeur))
             }
 
             const vendeurId = res.data.vendeur._id; // <-- Récupère l'ID du vendeur

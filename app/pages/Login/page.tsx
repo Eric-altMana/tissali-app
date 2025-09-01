@@ -31,6 +31,7 @@ function LoginPage() {
                 password: formData.password
             })
             console.log("Réponse de la connexion :", res.data)
+            localStorage.setItem("client", JSON.stringify(res.data.client))
             
             const clientId = res.data.client.id; // <-- Récupère l'ID du client
             if (clientId) {

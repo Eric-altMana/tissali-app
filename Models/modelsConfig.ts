@@ -36,13 +36,16 @@ export const VendeurSchema = new Schema({
 
 
 export const ProduitSchema = new Schema({
-    titre: { type: String, required: true },
+    produitNom: { type: String, required: true },
     description: { type: String },
-    prix: { type: Number, required: true },
-    quantite: { type: Number, required: true },
-    type: { type: String },
-    images: { type: [String], default: [] },
-    categorie: { type: String },
+    prixInitial: { type: Number, required: true },
+    qte: {type: Number, default: 0},
+    qteVendue: {type: Number, default: 0},
+    qteRestante: {type: Number, default: 0},
+    typeProduit: { type: String },
+    image: { type: String, default: "" },
+    slug: { type: String, required: true, index: true },
+    categorie: { type: Schema.Types.ObjectId, ref: "Categories", required: true, index: true },
     vendeurId: { type: Schema.Types.ObjectId, ref: 'Vendeurs', required: true },
     dateAjout: { type: Date, default: Date.now }
 });
@@ -57,6 +60,7 @@ export const CommandeSchema = new Schema({
             prixTotal: { type: Number, required: true },
             image: String,
             typeProduit: String,
+            vendeurId: {type: String}
         }
     ],
     localisation: [LocalisationSchema],
@@ -68,6 +72,14 @@ export const CommandeSchema = new Schema({
     total: Number,
     dateAjout: { type: Date, default: Date.now }
 })
+
+
+export const CategorieSchema = new Schema({    
+labelCategorie: { type: String, required: true, trim: true },
+    slug: { type: String, required: true, index: true },
+})
+
+export const CategorieCollection = models.Categories || model("Categories", CategorieSchema);
 
 export const CommandeCollection = models.Commandes || model("Commandes", CommandeSchema);
 

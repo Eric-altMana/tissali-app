@@ -9,6 +9,8 @@ import Image from 'next/image'
 import { ClientType } from './Types/Types'
 import FooterPage from './components/Footer/FooterPage'
 import ListProduitPage from './components/Listproduits'
+import ProductCard from '@/ux/ProductCard'
+import CardCategorie from '@/ux/CardCategorie'
 
 function Home() {
 
@@ -133,8 +135,10 @@ function Home() {
                 </div>
             </div>
 
+            <CardCategorie/>
+
             <div className='actu-ctn container-fluid py-5'>
-                <h3 className='py-3'>Produits ajoutés récemment</h3>
+                <h3 className='py-3 ms-lg-5 ps-lg-5'>Produits ajoutés récemment</h3>
                 <ListProduitPage />
             </div>
 

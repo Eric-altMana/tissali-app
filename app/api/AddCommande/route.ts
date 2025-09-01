@@ -1,3 +1,4 @@
+import { GetAuthToken } from "@/app/controllers/security/token"
 import { dbConnect } from "@/lib/mongoConfig"
 import { CommandeCollection } from "@/Models/modelsConfig"
 import { NextRequest, NextResponse } from "next/server"
@@ -6,9 +7,9 @@ export const POST = async (req: Request) => {
   try {
     await dbConnect()
 
-    const body = await req.json()
-
-    const newCommande = new CommandeCollection(body)
+    const data = await req.json()
+    
+    const newCommande = new CommandeCollection(data)
 
     await newCommande.save()
 
